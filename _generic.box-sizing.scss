@@ -1,0 +1,25 @@
+//
+// REVOLT!
+// BASE.BOX-SIZING
+//
+// Instead of including this code into `generic.reset`, this module is a
+// standalone, because it can have severe implications on the sites
+// structure.
+
+
+
+// Change from `box-sizing: content-box` to `border-box` so that when you add
+// `padding` or `border`s to an element, the overall declared `width` does not
+// change.
+// For example, `width: 100px;` will always be `100px` despite the
+// `border: 10px solid red;` and `padding: 20px;`.
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
